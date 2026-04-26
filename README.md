@@ -66,8 +66,8 @@ If this tool helps you save hours of manual drawing, consider buying me a coffee
 
 ### 🇻🇳 Trong nước (Domestic - Vietnam)
 
-|                                                              Scan VietQR (MBBank)                                                              | Account Details                                                                                                       |
-| :--------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------- |
+|                                             Scan VietQR (MBBank)                                              | Account Details                                                                 |
+| :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------ |
 | <img src="https://img.vietqr.io/image/MB-9937683773-compact.png?accountName=NGUYEN%20MINH%20DUC" width="200"> | **Bank**: MBBank<br>**Account No**: `9937683773`<br>**Name**: `NGUYEN MINH DUC` |
 
 ### 🌎 Quốc tế (International)
@@ -82,10 +82,12 @@ Support me via **Payoneer** (Transfer or Payment Request):
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Vanilla JS, Vite, HTML5 Canvas.
-- **AI**: Google Gemini 2.5 Flash Image.
-- **Styling**: Ant Design tokens, Glassmorphism.
+| Component     | Technology                       |
+| :------------ | :------------------------------- |
+| **Frontend**  | Vanilla JS, Vite, HTML5 Canvas   |
+| **AI Engine** | Google Gemini 2.5 Flash Image    |
+| **UI/UX**     | Ant Design Tokens, Glassmorphism |
 
----
+## ⚖️ License
 
-_Developed by Cày Cuốc & Antigravity AI community._
+**MIT © [minhducanhhuy](https://github.com/minhducanhhuy)**
