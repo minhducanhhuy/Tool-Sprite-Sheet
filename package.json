@@ -1,0 +1,23 @@
+{
+  "name": "shimeji-ai-tool",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "render": "node src/render_assets.js"
+  },
+  "devDependencies": {
+    "@fal-ai/client": "^1.10.0",
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.15.2",
+    "dotenv": "^17.4.2",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.4",
+    "gif-extract-frames": "^1.0.2"
+  }
+}
