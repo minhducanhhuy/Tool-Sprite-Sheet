@@ -1,49 +1,73 @@
-# 🐾 ToolAniPet AI - Shimeji Asset Generator
+# 🛠️ Tool-Sprite-Sheet: AI-Powered Animation Generator
 
-**ToolAniPet AI** là công cụ tối ưu giúp bạn biến một hình ảnh nhân vật duy nhất thành bộ Animation (Sprite Sheet) chuyên nghiệp để sử dụng cho Shimeji (Desktop Pets) hoặc Game Assets.
+<div align="center">
 
----
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
+![JS](https://img.shields.io/badge/language-JavaScript-yellow.svg)
+![AI](https://img.shields.io/badge/AI-Gemini%202.5-orange.svg)
 
-## ✨ Tính năng nổi bật (Features)
+**Automatically generate high-quality 2D character animations from a single image using Google Gemini 2.5 Flash.**
 
-- **One-Shot Animation**: Chỉ cần 1 ảnh gốc, AI sẽ tự động vẽ ra 8 khung hình chuyển động tiếp nối.
-- **Multimodal AI**: Sử dụng sức mạnh của **Gemini 2.5 Flash Image** (phiên bản 2026) để giữ nguyên thiết kế nhân vật.
-- **High Quality & Auto-Resize**: Tự động căn chỉnh và phóng to ảnh kết quả cho khớp 100% với kích thước ảnh gốc của bạn.
-- **Background Removal**: Tự động xóa nền trắng, xuất file PNG trong suốt sẵn sàng sử dụng.
-- **Preview Live**: Xem trước chuyển động của nhân vật ngay trên trình duyệt.
+[English Version](#-english-guide) | [Tiếng Việt](#-hướng-dẫn-tiếng-việt) | [Support Me](#-support-the-creator)
 
----
-
-## 🚀 Hướng dẫn sử dụng (How to Use)
-
-1. **Upload**: Tải lên ảnh nhân vật của bạn (Nên dùng ảnh PNG nền trong suốt để có kết quả tốt nhất).
-2. **Select Action**: Chọn hành động muốn tạo (Idle, Walk, Sit, Fall...).
-3. **Generate**: Nhấn nút "Generate Assets" và đợi AI thực hiện phép màu.
-4. **Download**: Tải về bộ PNG đã được cắt sẵn và căn chỉnh kích thước.
+</div>
 
 ---
 
-## 🛠️ Công nghệ (Tech Stack)
+## 🇬🇧 English Guide
 
-- **Frontend**: Vanilla JS, HTML5 Canvas, Vite.
-- **AI Engine**: Google Gemini 2.5 Flash Image & Imagen 4.
-- **Styling**: Modern CSS with Glassmorphism & Cyberpunk aesthetics.
+### 🌟 Features
+- **One-Click Generation**: Create full animation sequences (Idle, Walk, Sit, etc.) from just one reference image.
+- **AI-Powered Precision**: Uses Gemini 2.5 Flash Image to understand character style and generate consistent frames.
+- **Auto-Background Removal**: Transparent PNG outputs ready for your games or applications.
+- **Smart Resizing**: Automatically matches the frame size of your original reference image.
+- **Ant Design UI**: Clean, professional, and dark-mode optimized interface.
+
+### 🚀 Quick Start
+1. **Clone the repo**: `git clone https://github.com/your-username/tool-sprite-sheet.git`
+2. **Install**: `npm install`
+3. **Configure**: Rename `.env.example` to `.env` and add your `GEMINI_API_KEY`.
+4. **Run**: `npm run dev`
+
+### 📖 How to use
+1. **Upload**: Drop your character image (e.g., `pet-goc.png`).
+2. **Choose**: Select the animation action you want to generate.
+3. **Wait**: The AI will generate a 3x3 grid of frames.
+4. **Export**: Download individual frames or the complete sprite sheet.
 
 ---
 
-## ☕ Ủng hộ tác giả (Support the Creator)
+## 🇻🇳 Hướng dẫn Tiếng Việt
 
-Nếu công cụ này giúp bạn tiết kiệm thời gian, hãy mời mình một ly cà phê nhé! Mỗi đóng góp của bạn là động lực để mình duy trì và phát triển tool tốt hơn.
+### ✨ Tính năng chính
+- **Sinh ảnh 1 chạm**: Chỉ cần 1 ảnh gốc, AI sẽ tự tạo ra chuỗi hành động hoàn chỉnh.
+- **Công nghệ Gemini 2.5**: Tự động hiểu phong cách nhân vật và duy trì sự đồng nhất giữa các frame.
+- **Tự động xóa nền**: Xuất file PNG trong suốt, dùng được ngay cho game hoặc ứng dụng.
+- **Tự động căn chỉnh**: Frame render ra sẽ có kích thước khớp tuyệt đối với ảnh gốc của bạn.
+- **Giao diện Ant Design**: Trải nghiệm chuyên nghiệp, mượt mà và hỗ trợ Dark Mode.
 
-### 🇻🇳 Trong nước (Domestic)
+### 🛠️ Cách cài đặt
+1. Tải code về máy.
+2. Chạy lệnh `npm install` để cài đặt thư viện.
+3. Đổi tên file `.env.example` thành `.env` và điền `GEMINI_API_KEY` của bạn.
+4. Chạy lệnh `npm run dev` để bắt đầu.
 
-| Quét mã VietQR (MBBank) | Thông tin chi tiết |
+---
+
+## ☕ Support the Creator
+
+If this tool helps you save hours of manual drawing, consider buying me a coffee!
+
+### 🇻🇳 Trong nước (Domestic - Vietnam)
+
+| Scan VietQR (MBBank) | Account Details |
 | :---: | :--- |
-| <img src="https://img.vietqr.io/image/MB-9937683773-compact.png?addInfo=Donate%20ToolAniPet&accountName=NGUYEN%20MINH%20DUC" width="200"> | **Ngân hàng**: MBBank<br>**Số TK**: `9937683773`<br>**Chủ TK**: `NGUYEN MINH DUC`<br>**Nội dung**: `Donate ToolAniPet` |
+| <img src="https://img.vietqr.io/image/MB-9937683773-compact.png?addInfo=Donate%20ToolAniPet&accountName=NGUYEN%20MINH%20DUC" width="200"> | **Bank**: MBBank<br>**Account No**: `9937683773`<br>**Name**: `NGUYEN MINH DUC`<br>**Note**: `Donate ToolAniPet` |
 
 ### 🌎 Quốc tế (International)
 
-Bạn có thể ủng hộ mình qua **Payoneer** (Chuyển khoản hoặc yêu cầu thanh toán):
+Support me via **Payoneer** (Transfer or Payment Request):
 
 - **Payoneer Email**: `minhducanhhuy@gmail.com`
 
@@ -51,4 +75,11 @@ Bạn có thể ủng hộ mình qua **Payoneer** (Chuyển khoản hoặc yêu 
 
 ---
 
-*Phát triển bởi cộng đồng Cày Cuốc & Antigravity AI.*
+## 🛠️ Tech Stack
+- **Frontend**: Vanilla JS, Vite, HTML5 Canvas.
+- **AI**: Google Gemini 2.5 Flash Image.
+- **Styling**: Ant Design tokens, Glassmorphism.
+
+---
+
+*Developed by Cày Cuốc & Antigravity AI community.*
