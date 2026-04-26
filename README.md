@@ -68,7 +68,7 @@ If this tool helps you save hours of manual drawing, consider buying me a coffee
 
 |                                                              Scan VietQR (MBBank)                                                              | Account Details                                                                                                       |
 | :--------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://img.vietqr.io/image/MB-9937683773-compact.png?addInfo=Donate%20ToolSpriteSheet&accountName=NGUYEN%20MINH%20DUC" width="200"> | **Bank**: MBBank<br>**Account No**: `9937683773`<br>**Name**: `NGUYEN MINH DUC` |
+| <img src="https://img.vietqr.io/image/MB-9937683773-compact.png?accountName=NGUYEN%20MINH%20DUC" width="200"> | **Bank**: MBBank<br>**Account No**: `9937683773`<br>**Name**: `NGUYEN MINH DUC` |
 
 ### 🌎 Quốc tế (International)
 
