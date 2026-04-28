@@ -34,10 +34,10 @@ class ShimejiTool {
         this.spriteUploadInput = document.getElementById('sprite-upload-input');
 
         // Sprite Sheet Grid Config (Sẽ thay đổi động)
-        this.totalFrames = parseInt(this.frameCountSlider.value);
-        this.currentFps = parseInt(this.fpsSlider.value);
-        this.cols = Math.ceil(Math.sqrt(this.totalFrames));
-        this.rows = Math.ceil(this.totalFrames / this.cols);
+        this.totalFrames = 96;
+        this.currentFps = 30;
+        this.cols = 10;
+        this.rows = 10;
         this.currentFrameIndex = 0;
         this.baseImage = null;
         this.previewTimeout = null;
@@ -366,14 +366,14 @@ class ShimejiTool {
                 }
 
                 if (spriteUrl && totalFrames > 0) {
-                    this.currentFrameIndex++;
+                    // Tính toán số lượng frame cần nhảy dựa trên thời gian trôi qua
+                    const framesToSkip = Math.floor(delta / interval);
+                    this.currentFrameIndex += framesToSkip;
                     
-                    // Xử lý Seamless Loop: 
-                    // Chúng ta sử dụng (totalFrames - 1) làm điểm dừng để bỏ qua frame cuối bị trùng lặp với frame đầu
                     const effectiveFrames = totalFrames > 1 ? totalFrames - 1 : totalFrames;
 
                     if (this.currentFrameIndex >= effectiveFrames) {
-                        this.currentFrameIndex = 0;
+                        this.currentFrameIndex = this.currentFrameIndex % effectiveFrames;
                         
                         if (this.isSimMode) {
                             this.pickRandomFromPlaylist();
@@ -406,8 +406,13 @@ class ShimejiTool {
         const xPercent = cols > 1 ? (c * (100 / (cols - 1))).toFixed(2) : 0;
         const yPercent = rows > 1 ? (r * (100 / (rows - 1))).toFixed(2) : 0;
         
-        this.shimejiPreview.style.backgroundImage = `url(${spriteSheetUrl})`;
-        this.shimejiPreview.style.backgroundSize = `${cols * 100}% ${rows * 100}%`;
+        // CHỈ CẬP NHẬT ẢNH NỀN KHI THAY ĐỔI (Tối ưu hiệu năng cực cao)
+        if (this.shimejiPreview.dataset.currentUrl !== spriteSheetUrl) {
+            this.shimejiPreview.style.backgroundImage = `url(${spriteSheetUrl})`;
+            this.shimejiPreview.style.backgroundSize = `${cols * 100}% ${rows * 100}%`;
+            this.shimejiPreview.dataset.currentUrl = spriteSheetUrl;
+        }
+        
         this.shimejiPreview.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
     }
 }

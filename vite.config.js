@@ -96,21 +96,28 @@ const apiPlugin = () => ({
 
           // 3. Tải video về để chuyển sang Base64/DataURL cho Frontend
           const videoResponse = await fetch(`${videoUri}&key=${apiKey}`);
-          
+
           if (!videoResponse.ok) {
-            throw new Error(`Failed to fetch video file from Google: ${videoResponse.statusText}`);
+            throw new Error(
+              `Failed to fetch video file from Google: ${videoResponse.statusText}`,
+            );
           }
 
           const buffer = await videoResponse.arrayBuffer();
-          console.log(`[Vite-Veo] Video data received. Size: ${(buffer.byteLength / 1024 / 1024).toFixed(2)} MB`);
-          
+          console.log(
+            `[Vite-Veo] Video data received. Size: ${(buffer.byteLength / 1024 / 1024).toFixed(2)} MB`,
+          );
+
           // --- LƯU VIDEO LOCAL ---
           const timestamp = new Date().getTime();
-          const safePrompt = prompt.slice(0, 30).replace(/[^a-z0-9]/gi, '_').toLowerCase();
+          const safePrompt = prompt
+            .slice(0, 30)
+            .replace(/[^a-z0-9]/gi, "_")
+            .toLowerCase();
           const fileName = `video_${safePrompt}_${timestamp}.mp4`;
           const filePath = `./output/${fileName}`;
-          
-          import('fs').then(fs => {
+
+          import("fs").then((fs) => {
             fs.writeFileSync(filePath, Buffer.from(buffer));
             console.log(`[Vite-Veo] Video saved locally: ${filePath}`);
           });
@@ -134,10 +141,10 @@ const apiPlugin = () => ({
           const timestamp = new Date().getTime();
           const fileName = `spritesheet_${state}_${timestamp}.png`;
           const filePath = `./output/${fileName}`;
-          
+
           const base64Data = spriteSheetBase64.split(",")[1];
-          import('fs').then(fs => {
-            fs.writeFileSync(filePath, Buffer.from(base64Data, 'base64'));
+          import("fs").then((fs) => {
+            fs.writeFileSync(filePath, Buffer.from(base64Data, "base64"));
             console.log(`[Vite-Storage] Sprite Sheet saved: ${filePath}`);
           });
 
